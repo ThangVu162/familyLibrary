@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/js/bootstrap.js">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -19,7 +21,7 @@
 
                 <nav class="navbar-main">
                     <ul class="navbar-menu">
-                        <li class="navbar-item is-active">
+                        <li class="navbar-item active">
                             <a href="index.html"  title="Cá nhân">
                                 <i class="icon bi bi-book"></i>
                                 <span>Quản lý sách</span>
@@ -38,11 +40,11 @@
         <header class="header">
             <div class="level">
                 <div class="level-left">
-                    <button class="btn disabled button" tabindex="0"><i class="icon bi-arrow-left"></i></button>
-                    <button class="btn disabled button" tabindex="0"><i class="icon bi-arrow-right"></i></button>
+                    <button class="btn disabled " tabindex="0"><i class="icon bi-arrow-left"></i></button>
+                    <button class="btn disabled " tabindex="0"><i class="icon bi-arrow-right"></i></button>
                     <form class="search">
                         <div class="search-container">
-                            <button class="btn button" tabindex="0"><i class="icon bi-search"></i></button>
+                            <button class="btn " tabindex="0"><i class="icon bi-search"></i></button>
                             <div class="input-wrapper">
                                 <input type="text" class="form-control z-input-placeholder" placeholder="Nhập tên sách, tác giả hoặc nội dung,..." value="">
                             </div>
@@ -51,19 +53,19 @@
                 </div>
                 <div class="level-right">
                     <div class="setting-item">
-                        <button class="btn button" tabindex="0">
+                        <button class="btn " title="Sắp xếp" tabindex="0">
                             <i class="icon bi bi-sort-alpha-down"></i>
                         </button>
                     </div>
                     <span>
                         <div class="setting-item btn-upload">
-                            <a class="btn button" tabindex="0">
+                            <a class="btn " title="Thêm mới" tabindex="0">
                                 <i class="icon bi-plus-circle"></i>
                             </a>
                         </div>
                     </span>
                     <div class="setting-item">
-                        <button class="btn button" tabindex="0">
+                        <button class="btn " title="Cài đặt" tabindex="0">
                             <i class="icon bi bi-gear"></i>
                         </button>
                     </div>
@@ -72,13 +74,13 @@
         </header>
         <div class="box mainpage" >
             <div class="girdslider-page-container" id="scroll">
-                <div class="row">
+                <div class="myrow">
                     <div class="girdslider-item-aaa">
                         <div class="item-inner">
                             <div class="ma-box-content" style="padding-bottom: 0px;">
                                 <div class="products clearfix">
                                     <div class="product images-container">
-                                        <a href="#" title="Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm" class="product-image">
+                                        <a href="BookInformation.html" title="Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm" class="product-image">
                                             <div class="product-image">
                                                 <img class="lazyloaded" src="images/book_images/test.jpg" alt="Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm">
                                             </div>
@@ -86,12 +88,13 @@
                                     </div>
                                 </div>
                                 <h2 class="product-name-no-ellipsis">
-                                    <a href="#" title="Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm" class="product-image">
+                                    <a href="BookInformation.html" title="Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm" class="product-image">
                                         Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm
                                     </a>
                                 </h2>
                                 <div class="price-label">
-                                    <span class="price m-price-font">25.000đ</span>
+                                    <button type="button" class="btn btn-success">Success</button>
+                                    <button type="button" class="btn btn-danger">Danger</button>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +104,7 @@
                             <div class="ma-box-content" style="padding-bottom: 0px;">
                                 <div class="products clearfix">
                                     <div class="product images-container">
-                                        <a href="#" title="Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm" class="product-image">
+                                        <a href="BookInformation.html" title="Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm" class="product-image">
                                             <div class="product-image">
                                                 <img class="lazyloaded" src="images/book_images/test.jpg" alt="Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm">
                                             </div>
@@ -109,7 +112,7 @@
                                     </div>
                                 </div>
                                 <h2 class="product-name-no-ellipsis">
-                                    <a href="#" title="Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm" class="product-image">
+                                    <a href="BookInformation.html" title="Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm" class="product-image">
                                         Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm
                                     </a>
                                 </h2>
@@ -419,8 +422,76 @@
                         </div>
                     </div>
                 </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                </nav>
+                <div class="footer">
+                    <h3 class="title">
+                        <span>Thành Viên</span>
+                    </h3>
+                    <div class="myrow">
+                        <div class="member">
+                            <div class="info">
+                                <span>Vũ Văn Thắng</span>
+                                <p>email: 18021161@vnu.edu.vn</p>
+                                <p>phone: 0394790219</p>
+                                <p>facebook: fb.com/vuvanthangs</p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="info">
+                                <span>Nguyễn Tiến Dũng</span>
+                                <p>email: 18020373@vnu.edu.vn</p>
+                                <p>phone: ???</p>
+                                <p>facebook: ???</p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="info">
+                                <span>Đoàn Đức Dũng</span>
+                                <p>email: </p>
+                                <p>phone: </p>
+                                <p>facebook: </p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="info">
+                                <span>Trần Mạnh Đức</span>
+                                <p>email: </p>
+                                <p>phone: </p>
+                                <p>facebook: </p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="info">
+                                <span>Nguyễn Hồng Thái</span>
+                                <p>email: </p>
+                                <p>phone: </p>
+                                <p>facebook: </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
             </div>
+            
         </div>
+        
     </div>
 </body>
 </html>

@@ -60,15 +60,15 @@ body{
     .sidebar .navbar-main .navbar-menu .sidebar-lib{ 
         border-left: 3px solid transparent;
     }
-    .sidebar .navbar-main .is-active{
+    .sidebar .navbar-main .active{
         background-color: #393243;
         color: rebeccapurple !important;
         border-left: 3px solid purple;
     }
-    .sidebar .navbar-main .is-active a{
+    .sidebar .navbar-main .active a{
         color: white !important;
     }
-    /* .sidebar .navbar-main .is-active a :hover{
+    /* .sidebar .navbar-main .active a :hover{
         color: purple;
     } */
     /* .sidebar .navbar-main .navbar-menu .navbar-item{
@@ -83,7 +83,7 @@ body{
     .sidebar .navbar-main .navbar-menu .navbar-item :hover{ 
         color: #7C4AEF;
     }
-    .sidebar .navbar-main .navbar-menu .is-active :hover{ 
+    .sidebar .navbar-main .navbar-menu .active :hover, .setting-item:hover{ 
         color: #7C4AEF !important;
     }
 
@@ -117,6 +117,7 @@ body{
 ul {
     margin: 0;
     padding: 0;
+    padding-left: 0px !important;
 }
 .header{
     display: flex;
@@ -179,9 +180,12 @@ ul {
         padding: 0;
         border: none;
         /* font: inherit; */
-        color: #D5D5D7;
+        color: #D5D5D7 !important;
         background-color: transparent;
         word-break: normal;
+    }
+    .form-control:focus, .btn:focus{
+        box-shadow: none !important;
     }
     .header .level-left .search {
         position: relative;
@@ -211,6 +215,9 @@ ul {
         right: 10px;
         bottom: 0;
     }
+    /* .search-container .input-wrapper:focus{
+        outline: none !important;
+    } */
     .search-container input {
         margin: 0;
         display: inline-block;
@@ -224,9 +231,11 @@ ul {
         padding: 5px 0;
         line-height: 34px;
         border: none;
+        background-color: #2F2739 !important;
+        /* outline: none; */
     }
     input:focus{
-        outline: none;
+        outline: none !important;
     }
     .level .level-left, .level .level-right{
         display: flex;
@@ -255,6 +264,11 @@ ul {
         justify-content: center;
         background-color: #2C2537;
         border-radius: 999px;
+        
+    }
+    .btn {
+        padding: 0px !important;
+        border: none !important;
     }
     .header .level-right .setting-item>.btn .icon {
         color: #A5A4A7 !important;
@@ -271,7 +285,7 @@ ul {
     /* padding-left: 1px; */
     float: right;
     flex-grow: 1;
-    min-height: 100%;
+    /* min-height: 100%; */
     /* display: block; */
 } 
     .girdslider-page-container{
@@ -282,6 +296,7 @@ ul {
         /* overflow-y: hidden; */
         margin-right: -6px;
         margin-bottom: 0px;
+
     }
 
     #scroll::-webkit-scrollbar {
@@ -291,7 +306,7 @@ ul {
     #scroll::-webkit-scrollbar-thumb {
         background-color: #929CB7;
     }
-    .girdslider-page-container .row {
+    .myrow {
         margin: 0px 0px 5px 0px;
         display: grid;
         grid-template-columns: repeat(5, minmax(0,1fr));
@@ -299,6 +314,7 @@ ul {
         content: none !important;
         margin-left: 10px;
         margin-right: 10px;
+        box-sizing: unset !important;
         /* margin-bottom: 8px; */
         /* margin: inherit; */
     }
@@ -309,6 +325,9 @@ ul {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    .girdslider-item-aaa {
+        box-sizing: inherit !important;
     }
     .girdslider-item-aaa .item-inner {
         position: relative;
@@ -362,4 +381,48 @@ ul {
     }
 .box {
     display: block;
+    /* box-sizing: unset !important; */
 }
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #0A4AA2 !important;
+    border-color: #0A4AA2 !important;
+}
+    .page-link {
+        background-color: #011741 !important;
+        border: 1px solid #231B2E !important;
+    }
+    .page-link:focus{
+        box-shadow: none !important;
+    }
+
+.footer{
+    margin-top: 40px;
+    padding: 0 30px;
+    /* text-align: center; */
+    /* background-color: #170F30; */
+}
+    .footer .title{
+        margin-bottom: 27px;
+        font-size: 20px;
+        letter-spacing: 1.71px;
+        font-weight: 700;
+        color: #8c8a94;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .myrow .member{
+        width: 190px;
+        /* height: 200px; */
+        color: #8c8a94;
+    }
+    .info span{
+        font-size: 20px !important;
+        /* text-align: left !important; */
+    }
+    .info p{
+        text-align: left;
+        font-size: 12px !important;
+    }
