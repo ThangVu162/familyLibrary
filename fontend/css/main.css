@@ -44,7 +44,7 @@ body{
         display: flex;
         align-items: center;
     }
-    .sidebar .logo h1{
+    .sidebar .logo h1>a{
         color: aqua;
         font-size:x-large;
     }
