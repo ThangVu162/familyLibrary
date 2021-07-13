@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/book_information.css">
+    <link rel="stylesheet" href="css/table.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/js/bootstrap.js">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/book-information-container.css">
+    <!-- <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 </head>
 <body>
     <div id="root">
@@ -22,16 +24,22 @@
 
                 <nav class="navbar-main">
                     <ul class="navbar-menu">
-                        <li class="navbar-item active">
+                        <li class="navbar-item activee">
                             <a href="index.html"  title="Cá nhân">
                                 <i class="icon bi bi-book"></i>
                                 <span>Quản lý sách</span>
                             </a> 
                         </li>
                         <li class="navbar-item sidebar-lib">
-                            <a href="LoanBooks.html"  title="Khám phá">
+                            <a href="BorrowBooks.html"  title="Khám phá">
                                 <i class="icon bi bi-collection"></i>
                                 <span>Quản lý mượn sách</span>
+                            </a> 
+                        </li>
+                        <li class="navbar-item sidebar-lib">
+                            <a href="AccountManagement.html"  title="Khám phá">
+                                <i class="icon bi bi-person-lines-fill"></i>
+                                <span>Quản lý tài khoản</span>
                             </a> 
                         </li>
                     </ul> 
@@ -41,11 +49,11 @@
         <header class="header">
             <div class="level">
                 <div class="level-left">
-                    <button class="btn disabled button" tabindex="0"><i class="icon bi-arrow-left"></i></button>
-                    <button class="btn disabled button" tabindex="0"><i class="icon bi-arrow-right"></i></button>
+                    <button class="mybtn disabled button" tabindex="0"><i class="icon bi-arrow-left"></i></button>
+                    <button class="mybtn disabled button" tabindex="0"><i class="icon bi-arrow-right"></i></button>
                     <form class="search">
                         <div class="search-container">
-                            <button class="btn button" tabindex="0"><i class="icon bi-search"></i></button>
+                            <button class="mybtn button" tabindex="0"><i class="icon bi-search"></i></button>
                             <div class="input-wrapper">
                                 <input type="text" class="form-control z-input-placeholder" placeholder="Nhập tên sách, tác giả hoặc nội dung,..." value="">
                             </div>
@@ -54,19 +62,19 @@
                 </div>
                 <div class="level-right">
                     <div class="setting-item">
-                        <button class="btn button" tabindex="0">
+                        <button class="mybtn button" tabindex="0">
                             <i class="icon bi bi-sort-alpha-down" style="color: rgb(78, 75, 75) !important;"></i>
                         </button>
                     </div>
                     <span>
                         <div class="setting-item btn-upload">
-                            <a class="btn button" tabindex="0">
+                            <a class="mybtn button" tabindex="0">
                                 <i class="icon bi-plus-circle"></i>
                             </a>
                         </div>
                     </span>
                     <div class="setting-item">
-                        <button class="btn button" tabindex="0">
+                        <button class="mybtn button" tabindex="0">
                             <i class="icon bi bi-gear"></i>
                         </button>
                     </div>
@@ -74,15 +82,60 @@
             </div>
         </header>
         <div class="box mainpage">
-            <div class="book-information">
-                <div class="book-images">
-
-                </div>
-                <div class="book-information-container">
+            <div class="book-info">
+                <div class="myslideshow-container">
+                    <div class="mySlides myfade">
+                        <img src="images/book_images/test.jpg" style="width:100% !important; height: 300px;">
+                    </div>
                     
+                    <div class="mySlides myfade">
+                        <img src="images/book_images/1.jpg" style="width:100%; height: 300px;">
+                    </div>
+                    
+                    <div class="mySlides myfade">
+                        <img src="images/book_images/2.jpg" style="width:100%; height: 300px;">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <br>
+                </div>
+                <div class="image-map">
+                    <div class="images" onclick="currentSlide(1)">
+                        <a class="image">
+                            <img src="images/book_images/test.jpg" alt="xxx">
+                        </a> 
+                    </div>
+                    <div class="images" onclick="currentSlide(2)">
+                        <a class="image">
+                            <img src="images/book_images/1.jpg" alt="xxx">
+                        </a> 
+                    </div>
+                    <div class="images" onclick="currentSlide(3)">
+                        <a class="image">
+                            <img src="images/book_images/2.jpg" alt="xxx">
+                        </a> 
+                    </div>
+                </div>
+                <h2 class="book-name">
+                    Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm
+                </h2>
+                <div class="price-label">
+                    <button type="button" class="btn btn-success">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            <div class="book-info-container" id="tablescroll">
+                <h5 class="book-name">
+                    Dr.STONE - Tập 3: Nơi Nào Đó Sau 2 Triệu Năm
+                </h5>
+                <div class="product-view-sa">
+                    <div class="product-view-sa_one">
+                        <div class="product-view-sa-supplier"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/slideshow.js"></script>
 </body>
 </html>
