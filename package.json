@@ -16,6 +16,8 @@
         "postcss": "^8.1.14"
     },
     "dependencies": {
-        "bootstrap": "^5.0.2"
+        "bootstrap": "^5.0.2",
+        "jquery": "^3.6.0",
+        "jquery-confirm": "^3.3.4"
     }
 }
